@@ -1,0 +1,74 @@
+//animation for drop menu
+@keyframes fade_in {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    1% {
+        visibility: visible;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    } 
+}
+
+.fade_in {
+    animation: fade_in 300ms ease-in-out forwards;
+}
+
+@keyframes fade_out {
+    from {
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    } 
+}
+
+.fade_out {
+    animation: fade_out 300ms ease-in-out forwards;
+}
+
+//animation when modal is selected
+//animation for pledge
+@keyframes pop_in {
+    from {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    } 
+}
+
+.pop_in {
+    animation: pop_in 300ms ease-in-out forwards;
+}
+
+@keyframes pop_out {
+    from {
+        display: block;
+        opacity: 1;
+    }
+    99% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: none;
+        opacity: 0;
+    } 
+}
+
+.pop_out {
+    animation: pop_out 300ms ease-in-out forwards;
+}

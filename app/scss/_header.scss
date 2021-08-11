@@ -1,0 +1,126 @@
+.header {
+    background-image: url(/images/image-hero-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    height: 270px;
+    padding-left: 23px;
+    padding-top: 35px;
+    padding-right: 23px;
+
+    @include breakpoint_up(large){
+        background-image: url(/images/image-hero-desktop.jpg);
+        padding-left: 165px;
+        padding-top: 54px;
+        padding-right: 165px;
+        height: 400px;
+    }
+
+    &__overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        z-index: 0;
+        transition: all 300ms ease-in-out;
+        &.fade_in{
+            z-index: 1;
+            background-image: linear-gradient(#161515,transparent);
+        }
+
+        &.flop_in {
+            background-color: #272626;
+            opacity: 0.4;
+            z-index: 2;
+        }
+    }
+
+    &__logo {
+        position: relative;
+        z-index: 2;
+        @include breakpoint_up(large){
+            z-index: 0;
+        }
+    }
+
+    &__hamburger {
+        width: 18px;
+        height: 18px;
+        transition: all 300ms ease-in-out;
+        position: relative;
+        z-index: 2;
+
+        @include breakpoint_up(large){
+            display: none;
+        }
+
+        &.close {
+            background-image: url(/images/icon-hamburger.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+
+        &.open {
+            background-image: url(/images/icon-close-menu.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            background-size: cover;
+        }
+    }
+
+    &__menubar {
+        position: relative;
+        display: none;
+        z-index: 2;
+        @include breakpoint_up(large){
+            display: block;
+        }
+
+        a{
+            color: #FFFFFF;
+            font-size: 16px;
+            font-family: 'Commissioner', sans-serif;
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:not(:last-child){
+                margin-right: 32px;
+            }
+        }
+    }
+
+    &__menu {
+        position: absolute;
+        top: 88px;
+        left: 50%;
+        transform: translateX(-50%);
+        visibility: hidden;
+        width: 90%;
+        background-color: #FFF;
+        border-radius: 10px;
+        z-index: 10;
+
+        
+
+        a {
+            display: block;
+            font-size: 18px;
+            font-family: 'Commissioner', sans-serif;
+            padding-left: 24px;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            color: $black;
+            font-weight: 500;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid $darkGray;
+            }
+        }
+    }
+}

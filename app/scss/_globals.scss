@@ -1,0 +1,26 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 16px;
+    color: $darkGray;
+    background-color: #FAFAFA;
+}
+
+* {box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    background-color: $moderateCyan;
+    color: #FFFFFF;
+
+    &:hover {
+        background-color: $darkCyan;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,15 @@
+//screen thresh for mobile tablet and desktop
+$breakpoint_up: ('medium':'640px','large':'1024px','xlarge':'1400px');
+$breakpoint_down:('small':'639px','medium':'1023px','large':'1399px');
+
+@mixin breakpoint_up($size) {
+    @media (min-width:map-get($breakpoint_up, $size )){
+        @content;
+    }
+}
+
+@mixin breakpoint_down($size) {
+    @media (max-width:map-get($breakpoint_down, $size )){
+        @content;
+    }
+}

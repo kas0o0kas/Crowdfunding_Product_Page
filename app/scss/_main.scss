@@ -1,0 +1,327 @@
+.main {
+
+    &__container {
+        width: 90%;
+        position: relative;
+        top: -56px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include breakpoint_up(large){
+            width: 50%;
+            top: -90px;
+        }
+    }
+
+    &__intro {
+        position: relative;
+        text-align: center;
+        padding-left: 20px;
+        padding-top: 0px;
+        padding-right: 20px;
+        padding-bottom: 40px;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        border: 1px #F2F2F2 solid;
+        margin-bottom: 24px;
+
+        @include breakpoint_up(large){
+            padding-left: 48px;
+            padding-top: 0px;
+            padding-right: 48px;
+            padding-bottom: 46px;
+        }
+
+        .intro__logo {
+            position: absolute;
+            left: calc(50% - 29px);
+            top: -29px;
+        }
+
+        .intro__title {
+            font-size: 18px;
+            color: $black;
+            font-weight: 700;
+            padding-left: 60px;
+            padding-top: 55px;
+            padding-right: 60px;
+            padding-bottom: 0px;
+            margin-bottom: 22px;
+
+            @include breakpoint_up(large){
+                padding-left: 0px;
+                padding-top: 62px;
+                padding-right: 0px;
+                padding-bottom: 0px;
+            }
+        }
+
+        .intro__text {
+            line-height: 1.5;
+            margin-bottom: 28px;
+
+            @include breakpoint_up(large){
+                margin-bottom: 40px;
+            }
+        }
+
+        .intro__button {
+            display: flex;
+            justify-content: space-between;
+
+            .button__project {
+                color: #FFFFFF;
+                font-size: 14px;
+                font-weight: 500;
+                padding-left: 45px;
+                padding-top: 20px;
+                padding-right: 45px;
+                padding-bottom: 16px;
+                  border-radius: 31px;
+            }
+
+            .button__bookmark {
+                @include breakpoint_up(large){
+                    display: flex;
+                    align-items: center;
+                    background-color: #F4F8F9;
+                    padding-right: 24px;
+                    border-radius: 31px;
+                }
+                .bookmark__logo {
+                    @include breakpoint_up(large){
+                        margin-right: 16px;
+                        svg circle {
+                            fill: $darkCyan;
+                        }
+                        svg path{
+                            fill: #FFFFFF;
+                        }
+                    }
+                }
+                .bookmark__text {
+                    display: none;
+                    @include breakpoint_up(large){
+                        display: block;
+                        font-size: 14px;
+                        color: $darkCyan;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    &__statistic {
+        position: relative;
+        text-align: center;
+        border-radius: 10px;
+        background-color: #FFFFFF;
+        padding-left: 22px;
+        padding-top: 38px;
+        padding-right: 22px;
+        padding-bottom: 38px;
+        border: 1px #F2F2F2 solid;
+        margin-bottom: 24px;
+        @include breakpoint_up(large){
+            padding-left: 0px;
+            padding-top: 46px;
+            padding-right: 48px;
+            padding-bottom: 48px;
+        }
+
+        .statistic__container {
+            @include breakpoint_up(large){
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        .statistic__item {
+
+            @include breakpoint_up(large){
+                padding-left: 48px;
+                text-align: left;
+                margin-bottom: 40px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 34px;
+
+                @include breakpoint_up(large){
+                    border-right: 1px solid $darkGray;
+                }
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 25%;
+                    height: 1px;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: $darkGray;
+
+                    @include breakpoint_up(large){
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .statistic__number {
+            font-size: 32px;
+            color: $black;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .statistic__text {
+            margin-bottom: 22px;
+            @include breakpoint_up(large){
+                margin-bottom: 0px;
+            }
+        }
+
+        .statistic__processbar {
+            width: 100%;
+            height: 12px;
+            background-color: #F4F4F4;
+            border-radius: 6px;
+
+            @include breakpoint_up(large){
+                width: 93%;
+                position: relative;
+                left: calc(50% + 24px);
+                transform: translateX(-50%);
+            }
+            .processNow {
+                width: 100%;
+                height: 100%;
+                border-radius: 6px;
+                background-color: $moderateCyan;
+            }
+        }
+    }
+
+    &__reward {
+        text-align: left;
+        border: 1px #F2F2F2 solid;
+        line-height: 1.5;
+        padding-left: 24px;
+        padding-top: 44px;
+        padding-right: 24px;
+        padding-bottom: 40px;
+        font-size: 14px;
+        background-color: #FFFFFF;
+
+        @include breakpoint_up(large){
+            padding-left: 48px;
+            padding-top: 48px;
+            padding-right: 48px;
+        }
+
+        .reward__title {
+            font-size: 18px;
+            font-weight: 700;
+            color: $black;
+            margin-bottom: 32px;
+
+            @include breakpoint_up(large){
+                margin-bottom: 40px;
+            }
+        }
+
+        .reward__text {
+            margin-bottom: 34px;
+        }
+        .reward__options {
+            .options__item {
+                border: 1px #D8D8D8 solid;
+                padding: 24px;
+                border-radius: 10px;
+                background-color: #FFFFFF;
+
+                &.outStock {
+                    opacity: 0.7;
+                    pointer-events: none;
+
+                    .item__button {
+                        background-color: $darkGray;
+                    }
+
+                }
+                @include breakpoint_up(large){
+                    padding-left: 32px;
+                    padding-top: 36px;
+                    padding-right: 32px;
+                    padding-bottom: 32px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 26px;
+                }
+
+                .item__intro {
+                    @include breakpoint_up(large){
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+
+                .item__name {
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: $black;
+                    margin-bottom: 10px;
+                }
+
+                .item__describe {
+                    color: $moderateCyan;
+                    margin-bottom: 28px;
+                    font-weight: 500;
+                }
+
+                .item__text {
+                    margin-bottom: 30px;
+                    
+                }
+
+                .item__footer {
+                    @include breakpoint_up(large){
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+
+                .item__counter {
+                    margin-bottom: 30px;
+
+                    @include breakpoint_up(large){
+                        margin-bottom: 0px;
+                    }
+                    .counter {
+                        position: relative;
+                        top: 3px;
+                        font-size: 28px;
+                        font-weight: 700;
+                        color: $black;
+                    } 
+                }
+
+                .item__button {
+                    width: 160px;
+                    padding-left: 32px;
+                    padding-top: 18px;
+                    padding-right: 32px;
+                    padding-bottom: 18px;
+                    border-radius: 30px;
+
+                    @include breakpoint_up(large){
+                        width: auto;
+                        padding-left: 34px;
+                        padding-right: 34px;
+                    }
+                }
+            }
+        }
+    }
+    
+}

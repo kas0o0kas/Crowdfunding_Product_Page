@@ -1,0 +1,64 @@
+.feedback {
+    position: absolute;
+    top: 142px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    visibility: hidden;
+    z-index: 10;
+
+    @include breakpoint_up(large){
+        top: 460px;
+        width: 38%;
+    }
+
+    &__container {
+        text-align: center;
+        padding-left: 28px;
+        padding-top: 32px;
+        padding-right: 28px;
+        padding-bottom: 42px;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+
+        @include breakpoint_up(large){
+            padding-left: 54px;
+            padding-top: 50px;
+            padding-right: 54px;
+            padding-bottom: 50px;
+        }
+    }
+    
+
+    &__icon {
+        margin-bottom: 22px;
+
+        @include breakpoint_up(large){
+            margin-bottom: 50px;
+        }
+    }
+
+    &__title {
+        font-size: 18;
+        font-weight: 700;
+        color: $black;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        margin-bottom: 26px;
+
+        @include breakpoint_up(large){
+            margin-bottom: 34px;
+        }
+    }
+
+    &__button {
+        padding-top: 18px;
+        padding-bottom: 18px;
+        width: 32%;
+        position: relative;
+        left: calc(50% - 51px);
+        border-radius: 28px;
+    }
+}
